@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop nowt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+             #header{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E4E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: 60px;
+}
+.logo1{
+    width: 90px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+.navbar li a{
+    text-decoration: none;
+    /* font-size: 16px; */
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+.navbar li a:hover,
+.navbar li a.active{
+    color: #388178;
+}
+.navbar li a.active::after,
+.navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #388178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#product1{
+    text-align: center;
+}
+.pro1{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+.pro1:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+.pro1 img{
+    width: 100%;
+   border-radius: 20px;
+}
+.pro1 .des span{
+   color: #060603;
+   font-size: 12px;
+}
+.pro1 .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+.pro1 .des i{
+    font-size: 12px;
+    color: rgb(240, 225, 18);
+}
+.pro1 .des .pen{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+.pro1 .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #88ff6e;
+    font-size: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+.pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+.pro1 .des{
+    text-align: start;
+    padding: 10px 0;
+}
+        .sskills .Bells{
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+.sskills a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+.ear{
+    display: flex;
+    flex-wrap: wrap;
+}
+        .sskills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sskills .col{
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sskills .logo{
+    margin-bottom: 30px;
+}
+.sskills .Chibuke{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+        .logo{
+    width: 60px;
+}
+        .Bells{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+        .Chibuke{
+    font-size: 20px;
+    color: #222;
+}
+        .sskills .follow{
+    margin-top: 20px;
+}
+.sskills .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+.sskills .install .row .logo{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+.sskills .install .logo{
+    margin: 10px 0 15px 0;
+}
+.sskills .follow i:hover
+.sskills a:hover{
+    color: #088178;
+}
+.sskills .copyright{
+    width: 100%;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="./logo.jpg" class="logo"></a>
+        
+        <div>
+            <ul class="navbar">
+               <li><a href="./index.html">Home</a></li>
+               <li><a class="active" href="./shop.html">Shop</a></li>
+               <li><a href="./about.html">Blog</a></li>
+               <li><a href="./about.html">About</a></li>
+               <li><a href="./contact.html">Contact</a></li>
+               <li><a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+        <!-- <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div> -->
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h1 class="Somto">All the collections you need</h1>
+        <p class="Bells">Summer Collection New Morden Design</p>
+        <div class="pro-container">
+           <div class="pro1">
+              <img src="./jumia1.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>Lady shoot wears</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$25</h5>
+              </div>
+              <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+             <img src="./jumia 2.jpg">
+             <div class="des">
+                <span>Blanco</span>
+                <h5>MUN</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="pen">$25</h5>
+             </div>
+             <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+          </div>
+          <div class="pro1">
+             <img src="./jumia 3.jpg">
+             <div class="des">
+                <span>Dream</span>
+                <h5>Crazy Jeans</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="pen">$30</h5>
+             </div>
+             <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+          </div>
+          <div class="pro1">
+             <img src="./jumia 4.jpg">
+             <div class="des">
+                <span>Blanco</span>
+                <h5>Chanel</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="pen">$12</h5>
+             </div>
+             <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+          </div>
+          <div class="pro1">
+             <img src="./jumia 5.jpg">
+             <div class="des">
+                <span>Blanco</span>
+                <h5>Balenciaga</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="pen">$15</h5>
+             </div>
+             <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+          </div>
+          <div class="pro1">
+             <img src="./jumia 6.jpg">
+             <div class="des">
+                <span>Blanco</span>
+                <h5>Euachuks</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="pen">$30</h5>
+             </div>
+             <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+          </div>
+          <div class="pro1">
+             <img src="./jumia 7.jpg">
+             <div class="des">
+                <span>Balenciaga</span>
+                <h5>Euachuks</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="pen">$42</h5>
+             </div>
+             <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+          </div>
+          <div class="pro1">
+             <img src="./jumia 8.jpg">
+             <div class="des">
+                <span>Blanco</span>
+                <h5>Euachuks</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="pen">$30</h5>
+             </div>
+             <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+          </div>
+          <div class="pro1">
+            <img src="./jumia 9.jpg">
+            <div class="des">
+               <span>Blanco</span>
+               <h5>Euachuks</h5>
+               <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+               <h5 class="pen">$30</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 10.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>Euachuks</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$30</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 11.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>Euachuks</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$30</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 12.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>full wears</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$30</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 13.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>Addidas</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$20</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 14.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>Euachuks</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$25</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 15.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>Burberry</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$20</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 16.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>Full wears</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$30</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 17.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>Burberry</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$20</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 18.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>Burberry</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$30</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 19.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>New York</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$40</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 20.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>New York</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$40</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro1">
+            <img src="./jumia 21.jpg">
+            <div class="des">
+                <span>Blanco</span>
+                <h5>Burberry</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$20</h5>
+            </div>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+         </div>
+         <div class="pro-container">
+            <div class="pro1">
+               <img src="./shirt1.jpg">
+               <div class="des">
+                  <span>Blanco</span>
+                  <h5>Cold Wears</h5>
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$30</h5>
+               </div>
+               <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+            </div>
+            <div class="pro1">
+              <img src="./shirt2.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>Cold Singlets</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$15</h5>
+              </div>
+              <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./shirt3.jpg">
+              <div class="des">
+                 <span>Dream</span>
+                 <h5>Cold Wears</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$40</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./shirt9.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>Fild Shirt</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$30</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./shirt5.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>Cold Wears</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$45</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./shirt6.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>Cold Singlet</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$20</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./shirt7.jpg">
+              <div class="des">
+                 <span>Balenciaga</span>
+                 <h5>Parket Shirt</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$50</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./shirt8.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>Parket Shirt</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$50</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro-container">
+            <div class="pro1">
+               <img src="./new1.jpg">
+               <div class="des">
+                  <span>UC_MONEY</span>
+                  <h5>mini-wear</h5>
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h5 class="pen">$30</h5>
+               </div>
+               <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+            </div>
+            <div class="pro1">
+              <img src="./new2.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>Cold wear</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$40</h5>
+              </div>
+              <a href="#" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./new3.jpg">
+              <div class="des">
+                 <span>Louis Vutton</span>
+                 <h5>Lady Slippers</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$20</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./shirt2.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>Cold Singlet</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$25</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./new4.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>wilia Perfume</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$45</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+           <div class="pro1">
+              <img src="./new5.jpg">
+              <div class="des">
+                 <span>Blanco</span>
+                 <h5>Cold wear</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h5 class="pen">$45</h5>
+              </div>
+              <a href="" class="cart"><i class="fa-solid fa-cart-shopping" cart></i></a>
+           </div>
+          
+           
+              
+             
+    <footer class="sskills">
+        <div class="col">
+            <img src="./logo.jpg" class="logo">
+            <h4 class="Chibuke">Contact</h4>
+            <p class="Bells"><strong>Address:</strong> Port-Harcourt Rivers State</p>
+            <p class="Bells"><Strong>Phone:</Strong>(+234) 91-339-14379</p>
+            <p class="Bells"><Strong>Hours:</Strong>8:00-17:00 Mon - Sat</p>
+            <div class="follow">
+                <h4 class="Chibuke">Follow Us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=61566573432446"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@gloria.clothings3?_r=1&_d=ebe3g3hgjg53ig&sec_uid=MS4wLjABAAAAuLGTQHm3fcf4B
+                    zIlofMrRPKReKHLaQqT9lAf7SuVbH1QW35Qe99jEueR6VFshSX7&share_author_id=7422780758273868806&sharer_language=en&
+                    source=h5_m&u_code=egg9b1463mh72k&timestamp=1730708036&user_id=7422780758273868806&sec_user_id=MS4wLjABAAAA
+                    uLGTQHm3fcf4BzIlofMrRPKReKHLaQqT9lAf7SuVbH1QW35Qe99jEueR6VFshSX7&utm_source=copy&utm_campaign=client_share&u
+                    tm_medium=android&share_iid=7429247684538255110&share_link_id=553a617a-9220-490b-abd2-253773affaa0&share_app
+                    _id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/glor_yclothings?igsh=MWN4Zmluano4dHFwcA=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/2349133914379"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/glory-ebiola-patrick-613987331?utm_source=
+                        share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4 class="Chibuke">About Us</h4>
+            <a href="https://wa.me/2349133914379">About Us</a>
+            <a href="https://wa.me/2349133914379">Delivery Information</a>
+            <a href="https://wa.me/2349133914379">Privacy Policy</a>
+            <a href="https://wa.me/2349133914379">Terms & Conditions</a>
+            <a href="https://wa.me/2349133914379">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4 class="Chibuke">My Account</h4>
+            <a href="https://wa.me/2349133914379">Sign In</a>
+            <a href="https://wa.me/2349133914379">View Cart</a>
+            <a href="https://wa.me/2349133914379">My Wishlist</a>
+            <a href="https://wa.me/2349133914379">Track My Order</a>
+            <a href="https://wa.me/2349133914379">Help</a>
+        </div>
+        <div class="col install">
+            <h4 class="Chibuke">Install Apps</h4>
+            <p class="Bells">From App Store or Google Play</p>
+            <div class="row">
+                <img src="./app store45.jpg" class="logo">
+                <img src="./playstorre.jpg" class="logo">
+            </div>
+            <p class="Bells">Secured Payment Gateways</p>
+           <div class="ear">
+            <img src="./mastercard.jpg" class="logo">
+            <img src="./verve card.jpg" class="logo">
+            <img src="visa card.jpg" class="logo">
+            <img src="./dollar card.jpg" class="logo">
+           </div>
+        </div>
+
+        <div class="copyright">
+            <p class="Bells">@ 2024, Goldenice Tech</p>
+        </div>
+     </footer>
+</body>
+</html>
